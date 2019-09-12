@@ -8,6 +8,7 @@ jobs:
     name: mod up
     runs-on: ubuntu-18.04
     steps:
+    - uses: actions/checkout@v1
     - uses: cw-ozaki/github-action-test/up@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
