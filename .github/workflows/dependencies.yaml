@@ -1,4 +1,4 @@
-name: workflow
+name: update dependencies
 on:
   schedule:
   - cron:  '*/5 * * * *'
