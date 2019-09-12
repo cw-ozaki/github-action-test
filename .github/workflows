@@ -1,0 +1,13 @@
+name: workflow
+on:
+  schedule:
+  - cron:  '*/5 * * * *'
+
+jobs:
+  up:
+    name: mod up
+    steps:
+    - uses: ./up
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    args: --build --pull-request
