@@ -1,1 +1,4 @@
-dependencies: {}
+dependencies:
+  git:
+    version: 1.0.7
+    previousVersion: 1.0.7

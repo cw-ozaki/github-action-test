@@ -1,9 +1,9 @@
-FROM alpine/git:{{git.version}} as git
+FROM alpine/git:{{.git_version}} as git
 WORKDIR /
 RUN git clone https://github.com/variantdev/mod.git
 
 
-FROM golang:{{golang.version}}-alpine as builder
+FROM golang:1.13.0-alpine as builder
 
 ENV GOOS=linux
 ENV GOARCH=amd64
@@ -14,7 +14,7 @@ COPY --from=git /mod /go/src/github.com/variantdev/mod
 RUN apk add --no-cache bash make git ca-certificates && make build
 
 
-FROM alpine:{{alpine.version}}
+FROM alpine:3.10.2
 
 LABEL "com.github.actions.name"="variantdev/mod"
 LABEL "com.github.actions.description"="Package manager for Makefile and Variantfile. Any set of files in Git/S3/GCS/HTTP as a reusable and parameterized module"

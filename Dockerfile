@@ -1,4 +1,4 @@
-FROM alpine/git:1.0.6 as git
+FROM alpine/git:1.0.7 as git
 WORKDIR /
 RUN git clone https://github.com/variantdev/mod.git
 
