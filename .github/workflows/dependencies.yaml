@@ -1,7 +1,7 @@
 name: update dependencies
 on:
   schedule:
-  - cron:  '*/5 * * * *'
+  - cron:  '*/1 * * * *'
 
 jobs:
   up:
