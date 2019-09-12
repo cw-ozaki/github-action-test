@@ -2,11 +2,11 @@ name: update dependencies
 on:
   schedule:
   - cron:  '*/5 * * * *'
-runs-on: ubuntu-18.04
 
 jobs:
   up:
     name: mod up
+    runs-on: ubuntu-18.04
     steps:
     - uses: ./up
       env:
