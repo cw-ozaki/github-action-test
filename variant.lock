@@ -1,4 +1,8 @@
 dependencies:
+  alpine:
+    version: 20190809.0.0
   git:
     version: 1.0.7
     previousVersion: 1.0.7
+  golang:
+    version: 1.13.0-windowsservercore-ltsc2016

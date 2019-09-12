@@ -22,9 +22,6 @@ LABEL "com.github.actions.icon"="octagon"
 LABEL "com.github.actions.color"="orange"
 
 COPY --from=builder /go/src/github.com/variantdev/mod/mod /usr/local/bin/mod
+COPY entrypoint.sh /entrypoint.sh
 
-VOLUME ["/mod"]
-WORKDIR /mod
-
-ENTRYPOINT ["/usr/local/bin/mod"]
-CMD ["--help"]
+ENTRYPOINT ["/entrypoint.sh"]

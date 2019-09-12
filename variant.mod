@@ -3,7 +3,8 @@ provisioners:
     Dockerfile:
       source: Dockerfile.tpl
       arguments:
-        git_version: "{{.git.version}}"
+        git:
+          version: "{{.git.version}}"
 
 dependencies:
   git:
