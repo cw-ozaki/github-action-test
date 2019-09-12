@@ -8,6 +8,6 @@ jobs:
     name: mod up
     steps:
     - uses: ./up
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    args: --build --pull-request
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      args: --build --pull-request
