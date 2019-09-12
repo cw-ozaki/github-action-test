@@ -13,4 +13,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         entrypoint: sh
-        args: -c 'pwd && ls -la'
+        args: -c 'ls -la'
