@@ -12,4 +12,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: --build --pull-request
+        entrypoint: sh
+        args: -c 'pwd && ls -la'
