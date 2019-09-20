@@ -1,0 +1,7 @@
+pull_request_rules:
+- name: automatic merge
+  conditions:
+  - author=@github-actions
+  actions:
+    merge:
+      method: merge
