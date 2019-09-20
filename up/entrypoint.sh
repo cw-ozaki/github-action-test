@@ -15,8 +15,7 @@ git config --get-regexp '.*'
 
 echo "#########################################"
 
-ls -la /github/home
-cat /github/home/.gitconfig
+git pull origin master
 
 echo "#########################################"
 
