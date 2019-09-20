@@ -1,8 +1,8 @@
-name: update dependencies
+name: Update dependencies
 on:
-- push
+  push
 #  schedule:
-#  - cron:  '*/1 * * * *'
+#  - cron: '0 0 * * *'
 
 jobs:
   up:
@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-    - uses: cw-ozaki/github-action-test/up@master
+    - uses: cw-ozaki/github-action-test@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        MOD_ACTION_WORKING_DIR: ./base
       with:
-        args: --build --pull-request
+        args: up --build --pull-request

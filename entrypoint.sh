@@ -1,7 +1,5 @@
 #!/bin/sh
 
-cd "${MOD_ACTION_WORKING_DIR:-.}"
-
 cat << EOS > $HOME/.netrc
 machine github.com
 login ${GITHUB_ACTOR}
@@ -11,4 +9,6 @@ EOS
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global user.name "${GITHUB_ACTOR}"
 
-exec mod up "$@"
+cd "${MOD_ACTION_WORKING_DIR:-.}"
+
+exec mod "$@"

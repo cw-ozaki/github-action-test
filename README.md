@@ -1,11 +1,30 @@
 # MOD GitHub Actions
-These official Terraform GitHub Actions allow you to run `terraform fmt`, `validate`, `plan` and `apply` on your pull requests to help you review, validate and apply Terraform changes.
 
-## Getting Started
-To get started, check out our documentation: [https://www.terraform.io/docs/github-actions/getting-started/](https://www.terraform.io/docs/github-actions/getting-started/).
+This GitHub Action runs the [mod](https://github.com/variantdev/mod) for package management.
 
-## Actions
+## Usage
 
-### Up Action
-Runs `terraform fmt` and comments back if any files are not formatted correctly.
-<img src="./assets/fmt.png" alt="Terraform Fmt Action" width="80%" />
+```yaml
+name: Update dependencies
+on:
+  schedule:
+  - cron: '0 0 * * *'
+
+jobs:
+  up:
+    name: mod up
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: variantdev/mod-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: up --build --pull-request
+```
+
+For example, if you run `mod up --build --pull-request` regularly, a new PullRequest will be created when the package is updated.
+
+## Environments
+
+* `MOD_ACTION_WORKING_DIR`: The working directory where mod is run
