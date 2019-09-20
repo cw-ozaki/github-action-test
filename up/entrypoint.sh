@@ -7,7 +7,7 @@ git config --global user.name "${GITHUB_ACTOR}"
 
 echo "#########################################"
 
-git config --global http.https://github.com/cw-ozaki/github-action-test.extraheader "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+git config --global http.extraheader "AUTHORIZATION: basic ${GITHUB_TOKEN}"
 
 echo "#########################################"
 
