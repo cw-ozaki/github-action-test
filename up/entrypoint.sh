@@ -17,6 +17,7 @@ git config --get-all http.proxy
 echo "#########################################"
 
 ls -la /github/home
+cat /github/home/.gitconfig
 
 echo "#########################################"
 
