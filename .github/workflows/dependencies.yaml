@@ -13,5 +13,6 @@ jobs:
     - uses: cw-ozaki/github-action-test/up@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MOD_ACTION_WORKING_DIR: ./base
       with:
         args: --build --pull-request
