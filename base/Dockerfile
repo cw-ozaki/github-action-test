@@ -1,4 +1,4 @@
-FROM alpine/git:1.0.7
+FROM alpine/git:1.0.6
 
 ARG MOD_VERSION=0.2.1
 
