@@ -16,4 +16,8 @@ git config --get-all http.proxy
 
 echo "#########################################"
 
+ls -la /github/home
+
+echo "#########################################"
+
 exec mod up "$@"
