@@ -7,16 +7,11 @@ git config --global user.name "${GITHUB_ACTOR}"
 
 echo "#########################################"
 
-env
+git config --global http.https://github.com/cw-ozaki/github-action-test.extraheader "AUTHORIZATION: basic ${GITHUB_TOKEN}"
 
 echo "#########################################"
 
 git config --get-regexp '.*'
-
-echo "#########################################"
-
-git config --get-all http.https://github.com/cw-ozaki/github-action-test.extraheader
-git config --get-all http.proxy
 
 echo "#########################################"
 
