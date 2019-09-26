@@ -1,0 +1,6 @@
+#!/bin/bash
+set -eu
+
+env
+
+docker build -t $IMAGE_NAME .
