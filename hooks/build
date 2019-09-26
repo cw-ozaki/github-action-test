@@ -1,6 +1,3 @@
 #!/bin/bash
-set -eu
 
-env
-
-docker build -t $IMAGE_NAME .
+docker build --build-arg MOD_VERSION=${SOURCE_BRANCH#"v"} CUSTOM=$VAR -f $DOCKERFILE_PATH -t $IMAGE_NAME .
